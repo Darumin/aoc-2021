@@ -30,4 +30,3 @@ const fs = require('fs');
       console.log(`Part 2 ${slidingIncreases}`);
   });
 })();
-
