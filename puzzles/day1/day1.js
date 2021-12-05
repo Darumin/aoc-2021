@@ -1,6 +1,6 @@
-const { solve } = require('./input');
+const { solve } = require('../input');
   
-solve('puzzles/day1.txt', (entries) => {   
+solve('puzzles/day1/day1.txt', (entries) => {   
   let current = Number(entries[0]);
   let currentWindowSum = current + Number(entries[1]) + Number(entries[2]);
   let increases = 0, slidingIncreases = 0;

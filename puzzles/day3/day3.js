@@ -1,6 +1,6 @@
-const { solve } = require('./input');
+const { solve } = require('../input');
 
-solve('puzzles/day3.txt', (entries) => {
+solve('puzzles/day3/day3.txt', (entries) => {
   // power consumption
   const partOne = () => {
     var numBits = entries[0].length;

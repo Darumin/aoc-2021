@@ -1,6 +1,6 @@
-const { solve } = require('./input');
+const { solve } = require('../input');
 
-solve('puzzles/day4.txt', (entries) => {
+solve('puzzles/day4/day4.txt', (entries) => {
 
   const parseBoard = (board) => {
     let newBoard = [];

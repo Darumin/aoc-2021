@@ -1,7 +1,7 @@
 
-const { solve } = require('./input');
+const { solve } = require('../input');
   
-solve('puzzles/day2.txt', (entries) => {
+solve('puzzles/day2/day2.txt', (entries) => {
   function partOne() {
     let horizontalPos = 0, depth = 0;
 
