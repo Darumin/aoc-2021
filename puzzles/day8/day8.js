@@ -52,7 +52,7 @@ solve('puzzles/day8/day8.txt', (entries) => {
     return output;
   }
 
-  const partTwo = () => {
+  const getSolution = () => {
     let inputs = [];
     let outputs = [];
 
@@ -61,17 +61,25 @@ solve('puzzles/day8/day8.txt', (entries) => {
       inputs.push(p[0]);
       outputs.push(p[1]);
     });
-    
-    let sum = 0;
+
+    let partOne = 0;
+    let partTwo = 0;
 
     for(let i = 0; i < outputs.length; i++) {
       let signalwires = outputs[i].split(' ');
+
+      for(let wire of signalwires) { 
+        if(wire.length in {2:2, 4:4, 7:7, 3:3}){ 
+          partOne++; 
+        } 
+      }
+
       let decoder = buildDecoder(inputs[i].split(' ').map((x) => x.split('').sort().join('')));
-      sum += Number(getOutputValue(decoder, signalwires));
+      partTwo += Number(getOutputValue(decoder, signalwires));
     }
 
-    return sum;
+    return [partOne, partTwo];
   };
   
-  console.log(partTwo());
+  console.log(getSolution());
 });
