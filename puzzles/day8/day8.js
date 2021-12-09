@@ -1,4 +1,3 @@
-const { syncBuiltinESMExports } = require('module');
 const { solve } = require('../input');
 
 solve('puzzles/day8/day8.txt', (entries) => {
